@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sNow Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="grid wide grid-cols-6 gap-x-8 h-100">
+      <div class="col-span-1 d-flex align-center justify-center">
+        <div class="logo-box">
+          <img src="./img/logo.png", alt="logo" width="100%" class="logo-img">
+        </div>
+      </div> 
+      <div class="col-span-3 d-flex align-center">
+        <form action="" class="form form-search ml-8">
+          <div class="form-group form-search__group">
+            <input type="text" id="search" class="form-control" placeholder="Nhập từ khóa...">
+            <span class="form-search__icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+        </form>
+      </div> 
+      <div class="col-span-2 d-flex align-center justify-between">
+        <ul class="account d-flex justify-center">
+          <li class="account-item">
+            <a href="" class="account-link sign-up">Đăng ký</a> 
+          </li>
+          <li class="account-item"><span class="separate-characters">/</span></li>
+          <li class="account-item">
+            <a href="" class="account-link sign-in">Đăng nhập</a> 
+          </li>
+          <li class="account-item">
+            <select name="language" class="language border-none" id="">
+              <option value="VN">VN</option>
+              <option value="EN">EN</option>
+            </select>
+          </li>
+        </ul> 
+        <div class="cart d-flex align-center justify-center">
+          <a href="cart-icon">
+            <i class="fas fa-cart-plus"></i>
+            <span>8</span>
+          </a>
+          <ul class="cart-list" hidden>
+            <li class="cart-item">Không có sản phẩm nào</li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+  </header>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="grid wide grid-cols-12 gap-x-8 h-100">
+      <div class="col-span-3">
+        <div class="category d-flex align-center justify-between pl-6 pr-4 border h-100">
+          <h4 class="category-heading">Danh mục</h4>
+          <span>
+            <i class="fas fa-bars"></i>
+          </span>
+        </div>
+      </div>
+      <div class="col-span-9 d-flex justify-between">
+        <ul class="nav-list d-flex justify-start align-center">
+          <li class="nav-item"><a href="" class="nav-link text-decoration">Trang Chủ</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-decoration">Liên Hệ với chúng tôi</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="" class="text-decoration">Nạp tiền
+            <i class="fas fa-dollar-sign"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+ 
+ <!-- Main -->
+ <main class="main">
+  <div class="grid wide grid-cols-12 gap-x-8">
+    <!-- Breadcrumd -->
+    <div class="col-span-12">
+      <div class="breadcrumd d-flex justify-start align-center">
+        <a href="" class="breadcrumd-link active">Trang chủ</a>
+        <span class="separate-characters pl-1">/</span>
+        <a href="" class="breadcrumd-link">sNowShop Online</a>
+      </div>
+    </div>
+    <div class="col-span-3">
+      <div class="sidebar">
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <a href="" class="sidebar-heading">sNowShop Online</a>
+          </li>
+          <li class="sidebar-item">
+            <div class="sidebar-filter">
+              <h4 class="sidebar-heading">Lọc theo</h4>
+              <ul class="sidebar-filter__list">
+                <!-- <li class="sidebar-filter__item"><a href="">Số đầu</a></li> -->
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="banner">
+        <img width="100%" src="./img/banner1.png" alt="">
+      </div>
+    </div>
+    <div class="col-span-9">
+      <div class="grid grid-cols-3 gap-8">
+        <div class="col-span-3">
+          <div class="product-title">sNowShop Online</div>
+        </div>
+        <div class="col-span-3">
+          <div class="grid grid-cols-2">
+            <div class="view d-flex justify-start align-center">
+              <div class="view-mode d-flex">
+                <div class="view-mode__grid active">
+                  <i class="fas fa-th"></i>
+                </div>
+                <div class="view-mode__list">
+                  <i class="fas fa-bars"></i>
+                </div>
+              </div>
+              <div class="view__product-number">
+                <span>Có <span>27</span> sản phẩm</span>
+              </div>
+
+            </div>
+
+            <div class="sort-by d-flex justify-end align-center">
+              <span class="sort-by__label mr-8">Sắp xếp theo: </span>
+              <form action="" class="flex-1">
+                <select class="form-control" name="" id="">
+                  <option> -- Liên quan -- </option>
+                  <option value="AZ">Tên: A đến Z</option>
+                  <option value="ZA">Tên: Z đến A</option>
+                  <option value="minmax">Giá: thấp đến cao</option>
+                  <option value="maxmin">Giá: cao đến thấp</option>
+                </select>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1">
+          <div class="card">
+            <div class="card-top">
+              <img src="./img/sieu-data-sim-4g.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <a href="" class="text-decoration">
+                <h4 class="card-name">SIÊU DATA SIM 4G ( FREESHIP đơn 5 sim khi nhập...</h4>
+              </a>
+              <div class="card-price">
+                <span class="price">25.000 ₫</span>
+                <span class="regular-price">50.000 ₫</span>
+              </div>
+              <span class="card-rating">
+                <div class="star-content d-flex">
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star"><i class="fas fa-star"></i></div>
+                  <div class="number">(5)</div>
+                </div>
+              </span>
+            </div>
+            <div class="flag-on-sale">
+                <span>-50%</span>
+            </div>
+            <div class="label-flag">
+              <span>Độc quyền</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="card">
+            <div class="card-top">
+              <img src="./img/thanh-sim-hi-default.jpg" alt="">
+              <img src="./img/thanh-sim-hi.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <a href="" class="text-decoration">
+                <h4 class="card-name">THÁNH HI ( nhập mã để freeship khi mua 5 Sim)</h4>
+              </a>
+              <div class="card-price">
+                <span class="price">35.000 ₫</span>
+                <span class="regular-price">70.000 ₫</span>
+              </div>
+              <span class="card-rating">
+                <div class="star-content d-flex">
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star"><i class="fas fa-star"></i></div>
+                  <div class="number">(5)</div>
+                </div>
+              </span>
+            </div>
+            <div class="flag-on-sale">
+                <span>-50%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1">
+          <div class="card">
+            <div class="card-top">
+              <img src="./img/sieu-data-sim-4g.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <a href="" class="text-decoration">
+                <h4 class="card-name">SIÊU DATA SIM 4G ( FREESHIP đơn 5 sim khi nhập...</h4>
+              </a>
+              <div class="card-price">
+                <span class="price">25.000 ₫</span>
+                <span class="regular-price">50.000 ₫</span>
+              </div>
+              <span class="card-rating">
+                <div class="star-content d-flex">
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star"><i class="fas fa-star"></i></div>
+                  <div class="number">(5)</div>
+                </div>
+              </span>
+            </div>
+            <div class="flag-on-sale">
+                <span>-50%</span>
+            </div>
+            <div class="label-flag">
+              <span>Độc quyền</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="card">
+            <div class="card-top">
+              <img src="./img/thanh-sim-hi-default.jpg" alt="">
+              <img src="./img/thanh-sim-hi.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <a href="" class="text-decoration">
+                <h4 class="card-name">THÁNH HI ( nhập mã để freeship khi mua 5 Sim)</h4>
+              </a>
+              <div class="card-price">
+                <span class="price">35.000 ₫</span>
+                <span class="regular-price">70.000 ₫</span>
+              </div>
+              <span class="card-rating">
+                <div class="star-content d-flex">
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star"><i class="fas fa-star"></i></div>
+                  <div class="number">(5)</div>
+                </div>
+              </span>
+            </div>
+            <div class="flag-on-sale">
+                <span>-50%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1">
+          <div class="card">
+            <div class="card-top">
+              <img src="./img/sieu-data-sim-4g.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <a href="" class="text-decoration">
+                <h4 class="card-name">SIÊU DATA SIM 4G ( FREESHIP đơn 5 sim khi nhập...</h4>
+              </a>
+              <div class="card-price">
+                <span class="price">25.000 ₫</span>
+                <span class="regular-price">50.000 ₫</span>
+              </div>
+              <span class="card-rating">
+                <div class="star-content d-flex">
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star"><i class="fas fa-star"></i></div>
+                  <div class="number">(5)</div>
+                </div>
+              </span>
+            </div>
+            <div class="flag-on-sale">
+                <span>-50%</span>
+            </div>
+            <div class="label-flag">
+              <span>Độc quyền</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="card">
+            <div class="card-top">
+              <img src="./img/thanh-sim-hi-default.jpg" alt="">
+              <img src="./img/thanh-sim-hi.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <a href="" class="text-decoration">
+                <h4 class="card-name">THÁNH HI ( nhập mã để freeship khi mua 5 Sim)</h4>
+              </a>
+              <div class="card-price">
+                <span class="price">35.000 ₫</span>
+                <span class="regular-price">70.000 ₫</span>
+              </div>
+              <span class="card-rating">
+                <div class="star-content d-flex">
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star"><i class="fas fa-star"></i></div>
+                  <div class="number">(5)</div>
+                </div>
+              </span>
+            </div>
+            <div class="flag-on-sale">
+                <span>-50%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1">
+          <div class="card">
+            <div class="card-top">
+              <img src="./img/sieu-data-sim-4g.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <a href="" class="text-decoration">
+                <h4 class="card-name">SIÊU DATA SIM 4G ( FREESHIP đơn 5 sim khi nhập...</h4>
+              </a>
+              <div class="card-price">
+                <span class="price">25.000 ₫</span>
+                <span class="regular-price">50.000 ₫</span>
+              </div>
+              <span class="card-rating">
+                <div class="star-content d-flex">
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star"><i class="fas fa-star"></i></div>
+                  <div class="number">(5)</div>
+                </div>
+              </span>
+            </div>
+            <div class="flag-on-sale">
+                <span>-50%</span>
+            </div>
+            <div class="label-flag">
+              <span>Độc quyền</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="card">
+            <div class="card-top">
+              <img src="./img/thanh-sim-hi-default.jpg" alt="">
+              <img src="./img/thanh-sim-hi.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <a href="" class="text-decoration">
+                <h4 class="card-name">THÁNH HI ( nhập mã để freeship khi mua 5 Sim)</h4>
+              </a>
+              <div class="card-price">
+                <span class="price">35.000 ₫</span>
+                <span class="regular-price">70.000 ₫</span>
+              </div>
+              <span class="card-rating">
+                <div class="star-content d-flex">
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star star-on"><i class="fas fa-star"></i></div>
+                  <div class="star"><i class="fas fa-star"></i></div>
+                  <div class="number">(5)</div>
+                </div>
+              </span>
+            </div>
+            <div class="flag-on-sale">
+                <span>-50%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- page -->
+      <div class="page">
+        <span>
+          <i class="fas fa-angle-left"></i>
+          Về trước
+        </span>
+        <span class="active">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>
+          Tiếp
+          <i class="fas fa-angle-right"></i>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</main>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="grid wide grid-cols-4 gap-y-4 gap-x-6">
+      <div class="footer-content">
+        <h3 class="footer-heading">Sản phẩm</h3>
+        <ul class="footer-list">
+          <li class="footer-item"><a href="" class="footer-link">Giảm giá</a></li>
+          <li class="footer-item"><a href="" class="footer-link">Sản phẩm mới</a></li>
+          <li class="footer-item"><a href="" class="footer-link">Bán chạy nhất</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <h3 class="footer-heading">Thông tin công ty</h3>
+        <ul class="footer-list">  
+          <li class="footer-item"><a href="" class="footer-link">Điều khoản và điều kiện sử dụng</a></li>
+          <li class="footer-item"><a href="" class="footer-link">Giới thiệu</a></li>
+          <li class="footer-item"><a href="" class="footer-link">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <h3 class="footer-heading">Tài khoản của bạn</h3>
+        <ul class="footer-list">
+          <li class="footer-item"><a href="" class="footer-link">Thông tin tài khoản</a></li>
+          <li class="footer-item"><a href="" class="footer-link">Đơn hàng</a></li>
+          <li class="footer-item"><a href="" class="footer-link">Địa chỉ</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <div class="footer-content-body">
+          <h3 class="footer-heading">Thông tin cửa hàng</h3>
+        <p class="address">
+          <span>
+            <i class="fas fa-home"></i>
+            Địa chỉ: 
+          </span>
+          <ul class="address-list pl-6">
+            <li class="address-item">Hà Nội: 203 Xã Đàn</li>
+            <li class="address-item">Hồ Chí Minh: 125 Bis Hai bà Trưng, Q1</li>
+            <li class="address-item">Đà Nẵng: 150 Hàm Nghi, Q Thanh Khê</li>
+          </ul>
+        </p>
+        <p class="phone"> 
+          <span>
+            <i class="fas fa-phone"></i>
+          Phone: 
+        </span> 
+        0387776243</p>
+        <p class="email">
+          <span>
+            <i class="fas fa-envelope"></i>
+            Email cho chúng tôi: </span>
+          <a class="pl-6" href="">CSKH@snowshop.com.vn</a></p>
+        </div>
+        <div class="footer-content-download">
+          <h4 class="text-center py-1 text-primary fz-md text-upercase ">Tải ứng dụng MysNow</h4>
+          <div class="d-flex justify-center align-center">
+            <div class="d-flex flex-column">
+              <a href="">
+                <img width="125px" src="./img/android-app.png" alt="">
+              </a>
+              <a href="">
+                <img width="125px" class="mt-2" src="./img/ios-app.png" alt="">
+              </a>
+            </div>
+            <a href="">
+              <img width="125px" src="./img/bima-QR.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-span-4">
+        <div class="tags">
+          <div class="tags-category d-flex justify-start align-center">
+            <span class="tags-title">Mua sim</span>
+            <span class="tags-inner">
+              <a href="">Siêu data sim 4g</a>
+              <a href="">sieu data sim 4g</a>
+            </span>
+          </div>
+  
+          <div class="tags-content text-center">
+            <p class="fw-bold">Công ty cổ phần viễn thông sNow</p>
+            <p>Địa chỉ: Tầng 6, Tòa nhà King Building, số 7 Phố Chùa Bộc, Phường Quang Trung, Quận Đống Đa, Thành phố Hà Nội.</p>
+            <p>Tổng đài hỗ trợ: 0921667667 Email : CSKH@vietnamobile.com.vn</p>
+            <p>Mã số doanh nghiệp: 0107429715, đăng ký lần đầu ngày 12/5/2016, đăng ký thay đổi lần thứ 3 ngày 23/4/2019, cấp bởi Sở KHĐT thành phố Hà Nội.</p>
+            <img width="200px" src="./img/logoSaleNoti.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom col-span-4">
+        <div class="grid wide grid-cols-2 gap-8">
+          <div class="copyright">
+            <span>© 2019 </span> <a href="">sNow VN</a>.
+            <span>All Right Reserved</span>
+          </div>
+          <div class="paypal">
+            <img src="./img/phuong-thuc-tt-new.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </footer>
+</body>
+</html>

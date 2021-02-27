@@ -1,0 +1,87 @@
+.header {
+  height: 80px;
+  background: linear-gradient(90deg, $primary-color-light, $primary-color);
+}
+.separate-characters {
+  color: cyan;
+  font-size: 2rem;
+}
+.account {
+  flex: 1;
+  &-item {
+    
+    a {
+      color: rgb(252, 235, 235);
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    span a {
+      font-size: 1.6rem;
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 4px;
+    margin: 0 4px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $primary-color-light;
+    }
+  }
+  select, option {
+    color: white;
+    background-color: $primary-color-light;
+    outline: none;
+    border: 0;
+    padding: 0 4px;
+  }
+}
+
+.cart {
+  height: 60px;
+  width: 50px;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+    width: 1px;
+    height: 80%;
+    background-color: white;
+  }
+
+
+  a {
+    font-size: 3.4rem;
+    line-height: 3.4rem;
+    color: white;
+  }
+  span {
+    position: absolute;
+    top: 2px;
+    right: -4px;
+    padding: 2px 6px;
+    background-color: white;
+    color: $primary-color-light;
+    font-size: 1.2rem;
+    border-radius: 2px;
+  }
+
+  &-list {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 274px;
+    background-color: white;
+    padding: 20px 16px 30px;
+    border: 1px solid rgba($color: #4d4b4b, $alpha: 0.1);
+    color: rgb(110, 107, 107);
+  }
+  
+}
