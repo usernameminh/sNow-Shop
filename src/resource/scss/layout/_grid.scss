@@ -1,0 +1,83 @@
+$w-tablet: 644px;
+$w-pc: 984px;
+
+.grid {
+  width: 100%;
+  padding: 0;
+  display: grid;
+
+  &.wide {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+// using grid-template-columns(class-before, name-class, from, to) 
+// ex:
+// grid-template-columns(0, grid-cols, 3, 3) ==> grid-cols-3;
+@include grid-template-columns(0, grid-cols, 0, 12);
+
+// gap(, name-class, from, to) 
+// ex: 
+// gap(0, gap, 8, 8) ==> gap-9
+@include gap(0, gap, 0, 8);
+@include column-gap(0, gap-x, 0, 8);
+@include row-gap(0, gap-y, 0, 8);
+
+// grid-column(name-class, from, to) 
+// ex: 
+// grid-column(col-span, 8, 8) ==> col-span-8
+@include grid-column(col-span, 1, 13);
+
+@include grid-column-start(col-start, 1, 13);
+@include grid-column-end(col-end, 1 , 13);
+
+
+//     tablet
+@media screen and (min-width: 740px) {
+  @include grid-template-columns(0, grid-cols-md, 0, 12);
+
+  @include gap(0, gap-md, 0, 8);
+  @include column-gap(0, gap-md-x, 0, 8);
+  @include row-gap(0, gap-md-y, 0, 8);
+
+  @include grid-column(col-span-md, 0, 12);
+  @include grid-column-start(col-start-md, 1, 13);
+  @include grid-column-end(col-end-md, 1 , 13);
+}
+
+// pc low ->
+@media screen and (min-width: 1113px){
+  @include grid-template-columns(0, grid-cols-lg, 0, 12);
+  
+  @include gap(0, gap-lg, 0, 8);
+  @include column-gap(0, gap-lg-x, 0, 8);
+  @include row-gap(0, gap-lg-y, 0, 8);
+
+  @include grid-column(col-span-lg, 0, 12);
+  @include grid-column-start(col-start-lg, 1, 13);
+  @include grid-column-end(col-end-lg, 1 , 13);
+  
+}
+// wide tablet 
+@media (min-width: 740px) and (max-width: 1023px) {
+  &.wide {
+    width: $w-tablet;
+  }
+}
+
+// >= pc hight (wide)
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .wide {
+    width: $w-pc;
+  }
+  @include grid-template-columns(wide, grid-cols-lg, 0, 12);
+  @include gap(wide, gap-lg, 0, 8);
+  @include column-gap(wide, gap-lg-x, 0, 8);
+  @include row-gap(wide, gap-lg-y, 0, 8);
+  .wide {
+    @include grid-column(col-span-lg, 0, 12);
+    @include grid-column-start(col-start-lg, 1, 13);
+    @include grid-column-end(col-end-lg, 1 , 13);
+  }
+}

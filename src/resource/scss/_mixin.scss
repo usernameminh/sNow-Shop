@@ -1,0 +1,351 @@
+
+// ---------- [GRID LAYOUT] -----------
+// grid-template-columns
+@mixin grid-template-columns($class-before, $class, $from, $to) {
+  @if $class-before == 0 {
+    @for $numberCols from  $from through $to {
+      @if $from == 0 {
+        .#{$class}-none {
+          grid-template-columns: none;
+        }
+      }
+      .#{$class}-#{$numberCols} {
+        grid-template-columns: repeat($numberCols, minmax(0, 1fr));
+      }
+    } 
+  }@else {
+    @for $numberCols from  $from through $to {
+      @if $from == 0 {
+        .#{$class-before}.#{$class}-none {
+          grid-template-columns: none;
+        }
+      }
+      .#{$class-before}.#{$class}-#{$numberCols} {
+        grid-template-columns: repeat($numberCols, minmax(0, 1fr));
+      }
+    }
+  }
+}
+// gap
+@mixin gap($class-before, $class, $from, $to) {
+  @if $class-before == 0 {
+    @for $size from $from through $to {
+      .#{$class}-#{$size} {
+        gap: $size * 0.4rem;
+      }
+    }  
+  }@else {
+    @for $size from $from through $to {
+      .#{$class-before}.#{$class}-#{$size} {
+        gap: $size * 0.4rem;
+      }
+    }
+  }
+
+}
+// column-gap
+@mixin column-gap($class-before, $class, $from, $to) {
+  @if $class-before == 0 {
+    @for $size from $from through $to {
+      .#{$class}-#{$size} {
+        column-gap: $size * 0.4rem;
+      }
+    }  
+  }@else {
+    @for $size from $from through $to {
+      .#{$class-before}.#{$class}-#{$size} {
+        column-gap: $size * 0.4rem;
+      }
+    }
+  }
+
+}
+// row-gap
+@mixin row-gap($class-before, $class, $from, $to) {
+  @if $class-before == 0 {
+    @for $size from $from through $to {
+      .#{$class}-#{$size} {
+        row-gap: $size * 0.4rem;
+      }
+    }  
+  }@else {
+    @for $size from $from through $to {
+      .#{$class-before}.#{$class}-#{$size} {
+        row-gap: $size * 0.4rem;
+      }
+    }
+  }
+
+}
+// grid-column
+@mixin grid-column($class, $from, $to) {
+  .col-none {
+    display: none;
+  }
+
+  .col-auto {
+    grid-column: auto;
+  }
+
+  .#{$class}-full {
+    grid-column: 1 / -1;
+  }
+
+  @for $numberCol from $from through $to {
+    .#{$class}-#{$numberCol} {
+      grid-column: span $numberCol / span $numberCol;
+    }
+  }
+}
+// grid-column-end
+@mixin grid-column-end($class-end, $from, $to) {
+  .#{$class-end}-auto {
+    grid-column-end: auto;
+  }
+  @for $col from $from through $to {
+    .#{$class-end}-#{$col} {
+      grid-column-end: $col;
+    }
+  }
+}
+// grid-column-start
+@mixin grid-column-start($class-start, $from, $to) {
+  .#{$class-start}-auto {
+    grid-column-start: auto;
+  }
+  @for $col from $from through $to {
+    .#{$class-start}-#{$col} {
+      grid-column-start: $col;
+    }
+  }
+}
+
+// ------- [TEXT] ---------
+
+// [Text decoration]
+@mixin text-decoration($name, $style) {
+  .#{$name} {
+    text-decoration: $style;
+  }
+}
+
+// [text-align]
+@mixin text-align($name, $position) {
+  .#{$name} {
+    text-align: $position;
+  }
+}
+
+// [line-height]
+@mixin line-height($name, $size) {
+  .#{$name} {
+    line-height: $size;
+  }
+}
+
+// [Font-Size]
+@mixin font-size($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      font-size: $size * 0.4rem;
+    }
+  }
+}
+
+// [Color]
+@mixin color($name, $color) {
+  .#{$name} {
+    color: $color;
+  }
+}
+
+// [font-weight]
+@mixin font-weight($name, $size) {
+  .#{$name} {
+    font-weight: $size;
+  }
+}
+
+
+// [Border]
+@mixin border($name, $size, $style, $color) {
+  .#{$name} {
+    border-width: $size;
+    border-style: $style;
+    border-color: $color;
+  }
+}
+
+// [Border-radius]
+@mixin border-radius($name, $size) {
+  .#{$name} {
+    border-radius: $size;
+  }
+}
+
+
+// [Background-color]
+@mixin background-color($name, $color) {
+  .#{$name} {
+    background-color: $color;
+  }
+}
+
+// [Hover]
+@mixin hover($name, $bg-color, $color) {
+  .#{$name} {
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: $bg-color;
+      color: $color;
+    }
+  }
+}
+
+// [Cursor]
+@mixin cursor($name, $style) {
+  .#{$name} {
+    cursor: $style;
+  }
+}
+
+
+// ----- [SPACE] -----
+// [Margin]
+@mixin margin($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      margin: $size * 4px;
+    }
+  }
+}
+
+// [Margin-right, margin-left]
+@mixin margin-x($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      margin-left: $size * 4px;
+      margin-right: $size * 4px;
+    }
+  }
+}
+
+// [Margin-top, margin-bottom]
+@mixin margin-y($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      margin-top: $size * 4px;
+      margin-bottom: $size * 4px;
+    }
+  }
+}
+
+
+// [Margin-top]
+@mixin margin-top($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      margin-top: $size * 4px;
+    }
+  }
+}
+
+// [Margin-right]
+@mixin margin-right($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      margin-right: $size * 4px;
+    }
+  }
+}
+
+// [Margin-bottom]
+@mixin margin-bottom($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      margin-bottom: $size * 4px;
+    }
+  }
+}
+
+// [Margin-left]
+@mixin margin-left($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      margin-left: $size * 4px;
+    }
+  }
+}
+
+// ------- [Padding] ----------
+// [Padding]
+@mixin padding($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      padding: $size * 4px;
+    }
+  }
+}
+
+// [padding-right, padding-left]
+@mixin padding-x($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      padding-left: $size * 4px;
+      padding-right: $size * 4px;
+    }
+  }
+}
+
+// [padding-top, padding-bottom]
+@mixin padding-y($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      padding-top: $size * 4px;
+      padding-bottom: $size * 4px;
+    }
+  }
+}
+
+// [padding-top]
+@mixin padding-top($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      padding-top: $size * 4px;
+    }
+  }
+}
+
+// [padding-right]
+@mixin padding-right($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      padding-right: $size * 4px;
+    }
+  }
+}
+
+// [padding-bottom]
+@mixin padding-bottom($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      padding-bottom: $size * 4px;
+    }
+  }
+}
+
+// [padding-left]
+@mixin padding-left($name, $start, $end) {
+  @for $size from $start through $end {
+    .#{$name}-#{$size} {
+      padding-left: $size * 4px;
+    }
+  }
+}
+
+
+
+
+
+
+

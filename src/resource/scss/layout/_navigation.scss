@@ -1,0 +1,60 @@
+.nav {
+  height: 40px;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+
+
+  .category {
+    &-heading {
+      font-size: 1.6rem;
+      color: $text-color;
+      font-weight: 500;
+    }
+  }
+  &-list {
+    flex: 1;
+  }
+  &-item {
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.3s all ease-out;
+    &:hover {
+      background-color: $primary-color-light;
+      .nav-link {
+        color: white;
+      }
+    }
+  }
+
+  &-link {
+    color: $text-color;
+    transition: 0.3s all ease-out;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    padding: 0 12px;
+    width: 100%;
+  }
+
+  &-right {
+    a {
+      height: 100%;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      background-color: $primary-color-md;
+      i {
+        border-radius: 50%;
+        border: 2px solid white;
+        padding: 1px 3px;
+        margin-left: 6px;
+      }
+    }
+  }
+}

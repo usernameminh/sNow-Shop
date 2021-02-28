@@ -1,0 +1,29 @@
+extend ./layout/index
+block content 
+  .grid.wide.grid-cols-12.gap-x-8
+    // Breadcrumd
+    .col-span-12
+      .breadcrumd.d-flex.justify-start.align-center
+        a.breadcrumd-link.active(href='') Trang chủ
+        span.separate-characters.pl-1 /
+        a.breadcrumd-link(href='') Liên hệ chúng tôi
+    .col-span-12.laber-themes.mt-3
+      h4.tabs-title.fz-md.text-upercase.py-4.border-bottom.pl-12.text-normal.bg-white &Dstrok;&abreve;ng nh&#x1EAD;p v&agrave;o t&agrave;i kho&#x1EA3;n c&#x1EE7;a b&#x1EA1;n
+      .grid.grid-cols-12.bg-white.mt-4.mb-8
+        .mt-4.mb-8.col-start-4.col-end-10
+          .form.px-8.py-1
+            .form-group
+              label.form-label(for='') T&ecirc;n &dstrok;&abreve;ng nh&#x1EAD;p
+              input.form-control(type='text', name='', id='', placeholder='your@email.com')
+            .form-group
+              label.form-label(for='') M&#x1EAD;t kh&#x1EA9;u
+              .d-flex.flex-row
+                input.form-control.flex-1(type='text', name='', id='', placeholder='Nhập mật khẩu')
+                span.btn.bg-dark.text-white.cursor-pointer.border-none Hi&#x1EC3;n th&#x1ECB;
+            p.text-center
+              a.no-underline.py-4.text-hover.text-normal(href='') Qu&ecirc;n m&#x1EAD;t kh&#x1EA9;u?
+            .form-group
+              input.form-control.bg-success.fz-md.text-white.cursor-pointer(type='submit', value='Đăng nhập')
+        .col-span-12.py-6.border-top
+          .text-center
+            a.no-underline.py-4.text-normal.fz-md.text-hover(href='') Kh&ocirc;ng c&oacute; t&agrave;i kho&#x1EA3;n? T&#x1EA1;o t&agrave;i kho&#x1EA3;n &#x1EDF; &dstrok;&acirc;y

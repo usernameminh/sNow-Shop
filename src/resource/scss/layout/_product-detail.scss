@@ -1,0 +1,72 @@
+.product-img {
+  &-top {
+    background-color: white;
+  }
+  &-item {
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    width: 90px;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      background-color: #fff;
+    }
+  }
+
+}
+
+.product {
+  &-heading {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    font-weight: 500;
+    color: $text-color-black;
+    margin: 0;
+  }
+
+  &-description-short {
+    font-size: 1rem;
+    color: $text-color;
+    line-height: 1.6rem;
+    margin-top: 12px;
+
+    b {
+      font-size: 1.2rem;
+    }
+  }
+
+  &-action {
+    border-top: 1px solid rgba($color: #000000, $alpha: .3);
+    margin-top: 14px;
+    padding-top: 14px;
+  }
+}
+
+.buy-now {
+  .btn {
+    transition: all 0.3s ease-in;
+    &:hover {
+      background-color: rgba($color: $primary-color, $alpha: .8);
+    } 
+  }
+}
+
+.social-sharing {
+  .btn {
+    padding: 6px 10px;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    &:hover {
+      color: blue;
+    }
+  }
+
+}
+
+.tabs {
+  &-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}

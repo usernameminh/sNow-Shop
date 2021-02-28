@@ -1,0 +1,30 @@
+// Header
+.grid.wide.grid-cols-6.gap-x-8.h-100
+  .col-span-1.d-flex.align-center.justify-center
+    .logo-box
+      img.logo-img(src='/img/logo.png', alt='logo', width='100%')
+  .col-span-3.d-flex.align-center
+    form.form.form-search.ml-8(action='')
+      .form-group.form-search__group
+        input#search.form-control(type='text', placeholder='Nhập từ khóa...')
+        span.form-search__icon
+          i.fas.fa-search
+  .col-span-2.d-flex.align-center.justify-between
+    ul.account.d-flex.justify-center
+      li.account-item
+        a.account-link.sign-up(href='/register') Đăng ký
+      li.account-item
+        span.separate-characters /
+      li.account-item
+        a.account-link.sign-in(href='/login') Đăng nhập
+
+      li.account-item
+        select.language.border-none(name='language', id='')
+          option(value='VN') VN
+          option(value='EN') EN
+    .cart.d-flex.align-center.justify-center
+      a(href='cart-icon')
+        i.fas.fa-cart-plus
+        span 8
+      ul.cart-list(hidden='')
+        li.cart-item Kh&ocirc;ng c&oacute; s&#x1EA3;n ph&#x1EA9;m n&agrave;o

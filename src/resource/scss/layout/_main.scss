@@ -1,0 +1,16 @@
+.main {
+  background-color: $bg-color;
+}
+.breadcrumd{
+  height: 40px;
+  &-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0 6px;
+    color: $text-color;
+  }
+}
+
+.active {
+  color: $primary-color-md;
+}

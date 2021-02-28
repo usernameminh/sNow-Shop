@@ -1,0 +1,294 @@
+extend ./layout/index
+block content 
+  .grid.wide.grid-cols-12.gap-x-8
+    // Breadcrumd
+    .col-span-12
+      .breadcrumd.d-flex.justify-start.align-center
+        a.breadcrumd-link.active(href='') Trang chủ;
+        span.separate-characters.pl-1 /
+        a.breadcrumd-link(href='') sNowShop Online
+
+    // sidebar
+    .col-span-3
+      .sidebar
+        ul.sidebar-list
+          li.sidebar-item
+            a.sidebar-heading(href='') sNowShop Online
+          li.sidebar-item
+            .sidebar-filter
+              h4.sidebar-heading L&#x1ECD;c theo
+              ul.sidebar-filter__list
+                // <li class="sidebar-filter__item"><a href="">Số đầu</a></li>
+      .banner
+        img(width='100%', src='./img/banner1.png', alt='')
+    
+
+    // content
+    .col-span-9
+      .grid.grid-cols-3.gap-8
+        // title
+        .col-span-3
+          .product-title sNowShop Online
+        
+        // bar
+        .col-span-3
+          .grid.grid-cols-2
+
+            // view mode
+            .view.d-flex.justify-start.align-center
+              .view-mode.d-flex
+                .view-mode__grid.active
+                  i.fas.fa-th
+                .view-mode__list
+                  i.fas.fa-bars
+              .view__product-number
+                span
+                  | Có: 
+                  span 27
+                  |  sản phẩm
+
+            // sort by
+            .sort-by.d-flex.justify-end.align-center
+              span.sort-by__label.mr-8 Sắp xếp theo: 
+              form.flex-1(action='')
+                select.form-control(name='', id='')
+                  option  -- Liên quan --
+                  option(value='AZ') Tên: A đến Z
+                  option(value='ZA') Tên: Z đến A
+                  option(value='minmax') Giá: thấp đến cao
+                  option(value='maxmin') Giá: cao đến thấp
+          
+        // card product
+        .col-span-1
+          .card
+            a(href="/detail") 
+              .card-top
+                img(src='./img/sieu-data-sim-4g.jpg', alt='')
+            .card-body
+              a.no-underline(href='/detail')
+                h4.card-name SIÊU DATA SIM 4G ( FREESHIP đơn 5 sim khi nhập...
+              .card-price
+                span.price 25.000 &#x20AB;
+                span.regular-price 50.000 &#x20AB;
+              span.card-rating
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star
+                    i.fas.fa-star
+                  .number (5)
+            .flag-on-sale
+              span -50%
+            .label-flag
+              span &Dstrok;&#x1ED9;c quy&#x1EC1;n
+        .col-span-1
+          .card 
+            a(href="/detail") 
+              .card-top
+                img(src='./img/thanh-sim-hi-default.jpg', alt='')
+                //- img(src='./img/thanh-sim-hi.jpg', alt='')
+            .card-body
+              a.no-underline(href='/detail')
+                h4.card-name THÁNH HI ( nhập mã để freeship khi mua 5 Sim)
+              .card-price
+                span.price 35.000 &#x20AB;
+                span.regular-price 70.000 &#x20AB;
+              span.card-rating
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star
+                    i.fas.fa-star
+                  .number (5)
+            .flag-on-sale
+              span -50%
+        .col-span-1
+          .card
+            a(href="/detail") 
+              .card-top
+                img(src='./img/sieu-data-sim-4g.jpg', alt='')
+            .card-body
+              a.no-underline(href='/detail')
+                h4.card-name SIÊU DATA SIM 4G ( FREESHIP đơn 5 sim khi nhập...
+              .card-price
+                span.price 25.000 &#x20AB;
+                span.regular-price 50.000 &#x20AB;
+              span.card-rating
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star
+                    i.fas.fa-star
+                  .number (5)
+            .flag-on-sale
+              span -50%
+            .label-flag
+              span &Dstrok;&#x1ED9;c quy&#x1EC1;n
+        .col-span-1
+          .card 
+            a(href="/detail") 
+              .card-top
+                img(src='./img/thanh-sim-hi-default.jpg', alt='')
+                //- img(src='./img/thanh-sim-hi.jpg', alt='')
+            .card-body
+              a.no-underline(href='/detail')
+                h4.card-name THÁNH HI ( nhập mã để freeship khi mua 5 Sim)
+              .card-price
+                span.price 35.000 &#x20AB;
+                span.regular-price 70.000 &#x20AB;
+              span.card-rating
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star
+                    i.fas.fa-star
+                  .number (5)
+            .flag-on-sale
+              span -50%
+        .col-span-1
+          .card
+            a(href="/detail") 
+              .card-top
+                img(src='./img/sieu-data-sim-4g.jpg', alt='')
+            .card-body
+              a.no-underline(href='/detail')
+                h4.card-name SIÊU DATA SIM 4G ( FREESHIP đơn 5 sim khi nhập...
+              .card-price
+                span.price 25.000 &#x20AB;
+                span.regular-price 50.000 &#x20AB;
+              span.card-rating
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star
+                    i.fas.fa-star
+                  .number (5)
+            .flag-on-sale
+              span -50%
+            .label-flag
+              span &Dstrok;&#x1ED9;c quy&#x1EC1;n
+        .col-span-1
+          .card 
+            a(href="/detail") 
+              .card-top
+                img(src='./img/thanh-sim-hi-default.jpg', alt='')
+                //- img(src='./img/thanh-sim-hi.jpg', alt='')
+            .card-body
+              a.no-underline(href='/detail')
+                h4.card-name THÁNH HI ( nhập mã để freeship khi mua 5 Sim)
+              .card-price
+                span.price 35.000 &#x20AB;
+                span.regular-price 70.000 &#x20AB;
+              span.card-rating
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star
+                    i.fas.fa-star
+                  .number (5)
+            .flag-on-sale
+              span -50%
+        .col-span-1
+          .card
+            a(href="/detail") 
+              .card-top
+                img(src='./img/sieu-data-sim-4g.jpg', alt='')
+            .card-body
+              a.no-underline(href='/detail')
+                h4.card-name SIÊU DATA SIM 4G ( FREESHIP đơn 5 sim khi nhập...
+              .card-price
+                span.price 25.000 &#x20AB;
+                span.regular-price 50.000 &#x20AB;
+              span.card-rating
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star
+                    i.fas.fa-star
+                  .number (5)
+            .flag-on-sale
+              span -50%
+            .label-flag
+              span &Dstrok;&#x1ED9;c quy&#x1EC1;n
+        .col-span-1
+          .card 
+            a(href="/detail") 
+              .card-top
+                img(src='./img/thanh-sim-hi-default.jpg', alt='')
+                //- img(src='./img/thanh-sim-hi.jpg', alt='')
+            .card-body
+              a.no-underline(href='/detail')
+                h4.card-name THÁNH HI ( nhập mã để freeship khi mua 5 Sim)
+              .card-price
+                span.price 35.000 &#x20AB;
+                span.regular-price 70.000 &#x20AB;
+              span.card-rating
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star
+                    i.fas.fa-star
+                  .number (5)
+            .flag-on-sale
+              span -50%
+       
+      // page
+      .page
+          span.text-hover
+            i.fas.fa-angle-left
+            | Về trước
+          span.mx-1.active 1
+          span.mx-1 2
+          span.mx-1 3
+          span.mx-1 4
+          span.text-hover
+            | Tiếp
+            i.fas.fa-angle-right

@@ -1,0 +1,68 @@
+extend ./layout/index
+block content 
+  .grid.wide.grid-cols-12.gap-x-8
+    // Breadcrumd
+    .col-span-12
+      .breadcrumd.d-flex.justify-start.align-center
+        a.breadcrumd-link.active(href='') Trang chủ
+        span.separate-characters.pl-1 /
+        a.breadcrumd-link(href='') Liên hệ chúng tôi
+
+    // contact info
+    .col-span-4
+      .contact-info
+        h4.title.fz-md.text-dark.text-upercase.fw-normal.mt-4.py-2 Th&ocirc;ng tin c&#x1EED;a h&agrave;ng
+        .d-flex.align-center.border-bottom.py-4
+          .icon.fz-lg.text-normal
+            i.fas.fa-map-marker-alt
+          .data
+            ul.address-list.pl-6.text-dark
+              li.address-item H&agrave; N&#x1ED9;i: 203 X&atilde; &Dstrok;&agrave;n
+              li.address-item H&#x1ED3; Ch&iacute; Minh: 125 Bis Hai b&agrave; Tr&#x1B0;ng, Q1
+              li.address-item &Dstrok;&agrave; N&#x1EB5;ng: 150 H&agrave;m Nghi, Q Thanh Kh&ecirc;
+        .d-flex.align-center.border-bottom.py-4
+          .icon.fz-lg.text-normal
+            i.fas.fa-phone
+          .data.pl-6.text-normal
+            span.text-dark G&#x1ECD;i cho ch&uacute;ng t&ocirc;i: 
+            p.py-0.mt-0.mb-0 0387776243
+        .d-flex.align-center.py-4
+          .icon.fz-lg.text-normal
+            i.fas.fa-envelope
+          .data.pl-6.text-normal
+            span.text-dark Email c&#x1EE7;a ch&uacute;ng t&ocirc;i: 
+            a.d-block.text-decoration.py-0.mt-0.mb-0(href='') CSKH@snowshop.com.vn
+
+    // form message
+    .col-span-8.mb-8
+      .bg-white
+        .form.px-8.py-4
+          h4.form-heading.fz-md.text-upercase.py-4.text-normal Li&ecirc;n h&#x1EC7; v&#x1EDB;i ch&uacute;ng t&ocirc;i
+          .form-group
+            label.form-label(for='') &Dstrok;&#x1ECB;a ch&#x1EC9; e-mail
+            input.form-control(type='text', name='', id='', placeholder='your@email.com')
+          .form-group
+            label.form-label(for='') &Dstrok;i&#x1EC7;n th&#x1ECD;ai
+            input.form-control(type='text', name='', id='', placeholder='0xxx')
+          .form-group
+            label.form-label(for='') &Dstrok;&iacute;nh k&egrave;m
+            .d-flex
+              input.form-control.flex-1.mr-3(type='text', name='', id='')
+              span.btn.text-upercase.border-none.cursor-pointer.text-white.bg-success ch&#x1ECD;n t&#x1EAD;p tin
+          .form-group
+            label.form-label(for='') Tin nh&#x1EAF;n
+            textarea.px-3.py-2(name='', id='', placeholder='Message...')
+          .form-group.py-4
+            input.form-control.bg-success.fz-md.text-white.cursor-pointer(type='submit', value='Gửi')
+
+          span.text-hover
+            i.fas.fa-angle-left
+            | Về trước
+          span.mx-1.active 1
+          span.mx-1 2
+          span.mx-1 3
+          span.mx-1 4
+          span.text-hover
+            | Tiếp
+            i.fas.fa-angle-right
+

@@ -1,0 +1,292 @@
+extend ./layout/index
+block content 
+  .grid.wide.grid-cols-12.gap-x-8
+    // Breadcrumd
+    .col-span-12
+      .breadcrumd.d-flex.justify-start.align-center
+        a.breadcrumd-link.active(href='') Trang chủ
+        span.separate-characters.pl-1 /
+        a.breadcrumd-link(href='') Chi tiết sản phẩm
+
+    // banner
+    .col-span-3
+      .banner
+        img(width='100%', src='./img/banner1.png', alt='')
+
+    // content
+    .col-span-9
+      .grid.grid-cols-2.gap-x-4.bg-white.py-4.px-4
+        .product-img.px-4.py-2
+          .product-img-top
+            img(src='./img/sieu-data-sim-4g.jpg', width='100%', alt='')
+          .product-img-bottom
+            ul.product-img-list.d-flex
+              li.product-img-item
+                img(src='./img/sieu-data-sim-4g.jpg', width='100%', alt='')
+              li.product-img-item.ml-1
+                img(src='./img/sim-tam-free-1-thang-tang-sim-cam-on-.jpg', width='100%', alt='')
+        .product-content
+          h1.product-heading SI&Ecirc;U DATA SIM 4G ( FREESHIP &dstrok;&#x1A1;n 5 sim khi nh&#x1EAD;p m&atilde;)
+          .card-body.product
+            span.card-rating.py-1
+              .star-content.d-flex
+                .star.star-on
+                  i.fas.fa-star
+                .star.star-on
+                  i.fas.fa-star
+                .star.star-on
+                  i.fas.fa-star
+                .star.star-on
+                  i.fas.fa-star
+                .star
+                  i.fas.fa-star
+                a.number.no-underline(href='') (5 &dstrok;&aacute;nh gi&aacute;)
+            span.text-normal.fz-small.py-1
+              | Th&#x1B0;&#x1A1;ng hi&#x1EC7;u: 
+              a.no-underline(href='') Vietnamobile
+            .card-price
+              span.price.fz-lg.text-primary-dark 25.000 &#x20AB;
+              .d-flex.align-end
+                span.regular-price 50.000 &#x20AB;
+                span.fz-md.pl-1 -50%
+          .product-description-short
+            b SIM Si&ecirc;u DATA
+            |  - Mi&#x1EC5;n ph&iacute; 1 th&aacute;ng, Free ship khi nh&#x1EAD;p m&atilde; 
+            b FREESHIP2020
+            |  cho &dstrok;&#x1A1;n h&agrave;ng 5 sim
+          .product-action
+            .product-add-to-cart.d-flex
+              span.control-label.fz-small.pr-4 S&#x1ED1; l&#x1B0;&#x1EE3;ng: 
+              .product-quantity
+                span.px-2.cursor-pointer(style='font-size: 2rem;') -
+                span.px-2 1
+                span.px-2.cursor-pointer(style='font-size: 2rem;') +
+            span.product-availability.fz-small.d-block.py-2.text-primary
+              | B&#x1EA1;n kh&ocirc;ng &dstrok;&#x1B0;&#x1EE3;c mua qu&aacute; 5 sim, hi&#x1EC7;n t&#x1EA1;i b&#x1EA1;n &dstrok;&atilde; mua: 1 sim
+            .product-number-choose.mt-2.ml-1
+              ul.product-number-list
+                li.product-number-item.d-flex.align-center
+                  span.btn.border-radius-3.chooose-number-count.mr-4 1
+                  .btn.border-radius-4.chooose-number-action.cursor-pointer.border-none
+                    span.chooose-phone.pr-4.fz-small 0387776243
+                    a.change-number.text-primary-dark.pl-4.fz-small Ch&#x1ECD;n s&#x1ED1; kh&aacute;c
+            .buy-now.mt-5
+              .d-flex.align-center
+                span.btn.bg-primary-light.border-none.text-white.px-11.py-3.cursor-pointer Mua ngay
+                span.btn.bg-primary.border-none.ml-4.text-white.px-3.py-3.cursor-pointer Th&ecirc;m v&agrave;o gi&#x1ECF; h&agrave;ng
+          .social-sharing.mt-5
+            .d-flex.align-center
+              span.fz-small Chia s&#x1EBB;:
+              a.btn.border-radius-50.cursor-pointer.ml-3
+                i.fab.fa-facebook-f
+              a.btn.border-radius-50.cursor-pointer.ml-2
+                i.fab.fa-twitter
+              a.btn.border-radius-50.cursor-pointer.ml-2
+                i.fab.fa-pinterest
+          .block-reassurance.mt-5
+            ul
+              li.block-reassurance-item.d-flex.align-center.py-3.border-bottom
+                img(src='./img/ic_verified_user_black_36dp_1x.png', alt='')
+                span.pl-3.fz-small Ch&iacute;nh s&aacute;ch b&#x1EA3;o m&#x1EAD;t (SSL th&ocirc;ng tin s&#x1EBD; &dstrok;&#x1B0;&#x1EE3;c b&#x1EA3;o m&#x1EAD;t)
+              li.block-reassurance-item.d-flex.align-center.py-3
+                img(src='./img/ic_local_shipping_black_36dp_1x.png', alt='')
+                span.pl-3.fz-small Ch&iacute;nh s&aacute;ch giao h&agrave;ng (&dstrok;&#x1EA3;m b&#x1EA3;o gia h&agrave;ng &dstrok;&uacute;ng h&#x1EB9;n)
+      .grid.grid-cols-1.bg-white.mt-4
+        .tabs.px-4
+          h4.tabs-title.fz-md.text-upercase.py-4.border-bottom m&ocirc; t&#x1EA3; s&#x1EA3;n ph&#x1EA9;m
+          p.mt-1.mb-1.fz-small
+            | Mi&#x1EC5;n ph&iacute; v&#x1EAD;n chuy&#x1EC3;n v&#x1EDB;i &dstrok;&#x1A1;n h&agrave;ng 
+            b.fz-small.text-primary-dark 5 S&#x1EA3;n ph&#x1EA9;m thanh to&aacute;n online
+            |  , &aacute;p d&#x1EE5;ng cho c&aacute;c s&#x1EA3;n ph&#x1EA9;m sau: 
+            b.text-primary-dark.fz-small Si&ecirc;u Sim Data 4G, L&#x1B0;&#x1EDB;t m&#x1B0;&#x1EE3;t m&agrave; 1 th&aacute;ng, T&aacute;m th&#x1EA3; ga 1 th&aacute;ng v&agrave; Th&aacute;nh Hi
+          p.mt-2.mb-3
+            b.fz-small.text-primary-dark Nh&#x1EAD;p ngay m&atilde;; FREESHIP2019
+          p.mt-2.mb-3
+            b.fz-small.text-primary SI&Ecirc;U DATA SIM 4G - s&#x1EA3;n ph&#x1EA9;m &dstrok;&#x1ED9;c quy&#x1EC1;n tr&ecirc;n Vietnamobile Online Shop!
+          p.mt-1.mb-1.fz-small.text-normal
+            | V&#x1EDB;i &#x1B0;u th&#x1EBF; l&agrave; d&ograve;ng SIM gi&aacute; c&#x1EA1;nh tranh nh&#x1EA5;t th&#x1ECB; tr&#x1B0;&#x1EDD;ng c&ugrave;ng dung l&#x1B0;&#x1EE3;ng data v&ocirc; &dstrok;&#x1ECB;ch &dstrok;&aacute;p &#x1EE9;ng m&#x1ECD;i nhu c&#x1EA7;u l&#x1B0;&#x1EDB;t web, xem phim, nghe nh&#x1EA1;c&mldr;, Si&ecirc;u Data SIM 4G Vietnamobile &dstrok;ang chi&#x1EBF;m l&itilde;nh t&igrave;nh c&#x1EA3;m y&ecirc;u m&#x1EBF;n c&#x1EE7;a ng&#x1B0;&#x1EDD;i ti&ecirc;u d&ugrave;ng v&#x1EDB;i nhi&#x1EC1;u &#x1B0;u &dstrok;&atilde;i h&#x1EA5;p d&#x1EAB;n:
+          p.mt-4.mb-1.fz-small.text-normal
+            | Data t&#x1ED1;c &dstrok;&#x1ED9; cao 
+            b 30GB/th&aacute;ng
+            |  (h&#x1EBF;t 30GB h&#x1EA1; b&abreve;ng th&ocirc;ng 128kbps)
+          span.mt-1.mb-2.fz-small.text-normal -  Ph&iacute; duy tr&igrave; h&agrave;ng th&aacute;ng ch&#x1EC9; 30.000&dstrok;
+          b.fz-small.d-block.mt-4.mb-2 C&#x1B0;&#x1EDB;c ph&iacute; cu&#x1ED9;c g&#x1ECD;i tho&#x1EA1;i &amp; SMS:
+          ul(style='list-style: disc; margin-left: 20px;')
+            li.py-2.text-normal Tho&#x1EA1;i n&#x1ED9;i m&#x1EA1;ng: 990&dstrok;/ph&uacute;t
+            li.py-2.text-normal Tho&#x1EA1;i ngo&#x1EA1;i m&#x1EA1;ng: 1,500&dstrok;/ph&uacute;t 
+            li.py-2.text-normal TSMS li&ecirc;n m&#x1EA1;ng: 400&dstrok;/SMS
+          b.fz-small.d-block.mt-4.mb-2 C&aacute;c th&ocirc;ng tin kh&aacute;c:
+          ul(style='list-style: disc; margin-left: 20px;')
+            li.py-2.text-normal
+              | Gia h&#x1EA1;n: T&#x1EF1; &dstrok;&#x1ED9;ng gia h&#x1EA1;n li&ecirc;n t&#x1EE5;c trong 60 ng&agrave;y ti&#x1EBF;p theo k&#x1EC3; t&#x1EEB; cu&#x1ED1;i chu k&#x1EF3; hi&#x1EC7;n t&#x1EA1;i. Qu&aacute; 60 ng&agrave;y, g&oacute;i c&#x1B0;&#x1EDB;c s&#x1EBD; b&#x1ECB; h&#x1EE7;y.
+              | Sau 60 ng&agrave;y, n&#x1EBF;u c&oacute; nhu c&#x1EA7;u ti&#x1EBF;p t&#x1EE5;c s&#x1EED; d&#x1EE5;ng g&oacute;i c&#x1B0;&#x1EDB;c, qu&yacute; kh&aacute;ch &dstrok;&abreve;ng k&yacute; l&#x1EA1;i theo c&uacute; ph&aacute;p: 
+              i DK BIGDATA g&#x1EED;i 345
+            li.py-2.text-normal Ki&#x1EC3;m tra khuy&#x1EBF;n m&#x1EA1;i: *101#OK ho&#x1EB7;c *102#OK.
+      .grid.grid-cols-1.mt-4
+        .product-comments-block.py-3.bg-white
+          // title
+          .d-flex.justify-between.align-center.text-normal.fz-small.px-4.py-5.border-bottom
+            h6.title.flex-1.fz-md.mt-0.mb-0 &Dstrok;&aacute;nh gi&aacute; v&agrave; nh&#x1EAD;n x&eacute;t
+            span.open-comment-form.cursor-pointer.fz-small
+              i.fa.fa-edit
+              |  Nh&#x1EAD;n x&eacute;t v&#x1EC1; s&#x1EA3;n ph&#x1EA9;m
+          // customer comment
+          .mod-reviews.py-4.border-bottom
+            .d-flex.justify-between.align-center.px-2
+              span.card-rating
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+              .fromat-time-ago.fz-min.text-normal 19 th&aacute;ng tr&#x1B0;&#x1EDB;c
+            .d-flex.justify-start.align-center.px-2.mt-3
+              span.text-normal.fz-small
+                | b&#x1EDF;i 
+                span.fz-small.text-normal Kh&aacute;nh
+              span.d-flex.justify-start.align-center
+                img.verity-img.ml-2(src='./img/TB1bOqBeb_I8KJjy1XaXXbsxpXa-30-32.png', alt='', width='12px')
+                span.verity.fz-small.text-normal.ml-1.text-green &Dstrok;&atilde; x&aacute;c minh
+            .item-content.px-2.py-1
+              span.fz-small Th&#x1EF1;c s&#x1EF1; ok ko kh&aacute; b&abreve;n kho&abreve;n
+          .mod-reviews.py-4
+            .d-flex.justify-between.align-center.px-2
+              span.card-rating
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+              .fromat-time-ago.fz-min.text-normal 21 th&aacute;ng tr&#x1B0;&#x1EDB;c
+            .d-flex.justify-start.align-center.px-2.mt-3
+              span.text-normal.fz-small
+                | b&#x1EDF;i 
+                span.fz-small.text-normal Thanh
+              span.d-flex.justify-start.align-center
+                img.verity-img.ml-2(src='./img/TB1bOqBeb_I8KJjy1XaXXbsxpXa-30-32.png', alt='', width='12px')
+                span.verity.fz-small.text-normal.ml-1.text-green &Dstrok;&atilde; x&aacute;c minh
+            .item-content.px-2.py-1
+              span.fz-small S&#x1EA3;n ph&#x1EA9;m t&#x1ED1;t gi&aacute; r&#x1EBB; t&#x1ED1;c &dstrok;&#x1ED9; m&#x1EA1;ng cao ch&#x1EC9; c&oacute; 1 t&#x1EEB; l&agrave; &quot;Ngon b&#x1ED5; r&#x1EBB;&quot; h&#x1EBF;t
+        .laber-themes.mt-4
+          h4.tabs-title.fz-md.text-upercase.py-4.border-bottom.px-2.text-normal.bg-white B&#x1EA1;n c&utilde;ng c&oacute; th&#x1EC3; th&iacute;ch
+          .grid.grid-cols-3.gap-8.mt-4.mb-8
+            .col-span-1
+              .card
+                .card-top
+                  img(src='./img/thanh-sim-hi-default.jpg', alt='')
+                  img(src='./img/thanh-sim-hi.jpg', alt='')
+                .card-body
+                  a.no-underline(href='')
+                    h4.card-name TH&Aacute;NH HI ( nh&#x1EAD;p m&atilde; &dstrok;&#x1EC3; freeship khi mua 5 Sim)
+                  .card-price
+                    span.price 35.000 &#x20AB;
+                    span.regular-price 70.000 &#x20AB;
+                  span.card-rating
+                    .star-content.d-flex
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star
+                        i.fas.fa-star
+                      .number (5)
+                .flag-on-sale
+                  span -50%
+        .laber-themes.mt-3.mb-8
+          h4.tabs-title.fz-md.text-upercase.py-4.border-bottom.px-2.text-normal.bg-white 16 S&#x1EA2;N PH&#x1EA8;M KH&Aacute;C TRONG C&Ugrave;NG DANH M&#x1EE4;C:
+          .grid.grid-cols-3.gap-8.mt-4.mb-8
+            .col-span-1
+              .card
+                .card-top
+                  img(src='./img/thanh-sim-hi-default.jpg', alt='')
+                  img(src='./img/thanh-sim-hi.jpg', alt='')
+                .card-body
+                  a.no-underline(href='')
+                    h4.card-name TH&Aacute;NH HI ( nh&#x1EAD;p m&atilde; &dstrok;&#x1EC3; freeship khi mua 5 Sim)
+                  .card-price
+                    span.price 35.000 &#x20AB;
+                    span.regular-price 70.000 &#x20AB;
+                  span.card-rating
+                    .star-content.d-flex
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star
+                        i.fas.fa-star
+                      .number (5)
+                .flag-on-sale
+                  span -50%
+            .col-span-1
+              .card
+                .card-top
+                  img(src='./img/sieu-data-sim-4g.jpg', alt='')
+                .card-body
+                  a.no-underline(href='')
+                    h4.card-name SI&Ecirc;U DATA SIM 4G ( FREESHIP &dstrok;&#x1A1;n 5 sim khi nh&#x1EAD;p...
+                  .card-price
+                    span.price 25.000 &#x20AB;
+                    span.regular-price 50.000 &#x20AB;
+                  span.card-rating
+                    .star-content.d-flex
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star
+                        i.fas.fa-star
+                      .number (5)
+                .flag-on-sale
+                  span -50%
+                .label-flag
+                  span &Dstrok;&#x1ED9;c quy&#x1EC1;n
+            .col-span-1
+              .card
+                .card-top
+                  img(src='./img/thanh-sim-hi-default.jpg', alt='')
+                  img(src='./img/thanh-sim-hi.jpg', alt='')
+                .card-body
+                  a.no-underline(href='')
+                    h4.card-name TH&Aacute;NH HI ( nh&#x1EAD;p m&atilde; &dstrok;&#x1EC3; freeship khi mua 5 Sim)
+                  .card-price
+                    span.price 35.000 &#x20AB;
+                    span.regular-price 70.000 &#x20AB;
+                  span.card-rating
+                    .star-content.d-flex
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star.star-on
+                        i.fas.fa-star
+                      .star
+                        i.fas.fa-star
+                      .number (5)
+                .flag-on-sale
+                  span -50%
