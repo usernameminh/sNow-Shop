@@ -1,0 +1,38 @@
+extend ../layout/index
+block content 
+  .grid.wide.grid-cols-12.gap-x-8
+    //- Breadcrumd
+    .col-span-12
+      .breadcrumd.d-flex.justify-start.align-center
+        a.breadcrumd-link.active(href='') Trang chủ
+        span.separate-characters.pl-1 /
+        a.breadcrumd-link(href='') Liên hệ chúng tôi
+    
+    //- content 
+    .col-span-12
+      h4.tabs-title.fz-md.text-upercase.py-4.border-bottom.pl-12.text-normal.bg-white Danh sách sản phẩm bạn đang có
+      .bg-white.mt-4.mb-8
+        .mt-4.mb-8.col-start-4.col-end-10
+          table.w-100.py-2.px-2
+            thead.fz-md.bg-dark.text-white
+              tr 
+                th.py-4 STT 
+                th Tên sản phẩm 
+                th Giá
+                th Ngày đăng 
+                th Cập nhập 
+            tbody 
+            each product, index in products
+              - var numberOrder = index+1
+                tr.text-center 
+                  td.py-3= numberOrder
+                  td= product.name 
+                  td= product.price
+                  td= product.createdAt
+                  td 
+                    .d-flex.align-center.justify-center
+                      a.btn.text-white.cursor-pointer.text-hover.bg-hover.bg-success.text-md.py-1.px-1(href=`/products/${product._id}/edit`) Sửa
+                      span.separate-characters.pl-2.pr-2 /
+                      form(action=`/products/${product._id}?_method=DELETE`, method="POST") 
+                        button(type="submit").btn.bg-success.text-white.cursor-pointer.text-hover.bg-hover.text-md.py-1.px-1(href="/") Xóa
+                        

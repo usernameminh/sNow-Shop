@@ -842,11 +842,19 @@ template {
   border-style: solid;
   border-color: silver; }
 
+.border-1 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FF4800; }
+
 .no-underline {
   text-decoration: none !important; }
 
 .text-normal {
   color: #6A6A6A !important; }
+
+.text-primary {
+  color: #FF4800 !important; }
 
 .text-dark {
   color: #1d1d1d !important; }
@@ -937,6 +945,14 @@ template {
   .text-hover:hover {
     color: rgba(255, 72, 0, 0.8) !important; }
 
+.bg-hover {
+  transition: all 0.3s ease-in-out; }
+  .bg-hover:hover {
+    background-color: rgba(67, 123, 243, 0.8) !important; }
+
+.d-none {
+  display: none !important; }
+
 .btn {
   font-size: 1.4rem;
   text-decoration: none;
@@ -945,6 +961,9 @@ template {
   color: #6A6A6A;
   border: 1px solid rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in; }
+  .btn-primary {
+    background-color: #FF4800;
+    color: white; }
 
 .grid {
   width: 100%;
@@ -1976,6 +1995,12 @@ input[type="submit"] {
     background-color: rgba(67, 123, 243, 0.8) !important;
     color: rgba(255, 255, 255, 0.8) !important; }
 
+td, th {
+  border: 1px solid black; }
+
+table {
+  border-collapse: collapse; }
+
 .nav {
   height: 40px;
   background-color: white;
@@ -2113,7 +2138,9 @@ input[type="submit"] {
   align-items: center;
   padding: 10px; }
   .card-top {
-    overflow: hidden; }
+    height: 308px;
+    overflow: hidden;
+    object-fit: cover; }
     .card-top img {
       width: 100%;
       transition: all 0.2s ease-out; }

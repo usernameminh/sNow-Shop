@@ -67,10 +67,12 @@
 
 @include border(border-none, 0px !important, 0, 0);
 @include border(border, 0 1px 0 1px, solid, silver);
+@include border(border-1, 1px, solid, $primary-color);
 
 @include text-decoration(no-underline, none !important);
 
 @include color(text-normal, $text-color !important);
+@include color(text-primary, $primary-color !important);
 @include color(text-dark, $text-color-black !important);
 
 @include font-weight (fw-bold, bold);
@@ -176,4 +178,13 @@
   &:hover {
     color: rgba($color: $primary-color, $alpha: .8) !important;
   }
+}
+.bg-hover {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: rgba($color: $success-color, $alpha: .8) !important;
+  }
+}
+.d-none {
+  display: none !important;
 }

@@ -1,0 +1,36 @@
+extend ../layout/index
+block content 
+  .grid.wide.grid-cols-12.gap-x-8
+    // Breadcrumd
+    .col-span-12
+      .breadcrumd.d-flex.justify-start.align-center
+        a.breadcrumd-link.active(href='') Trang chủ
+        span.separate-characters.pl-1 /
+        a.breadcrumd-link(href='') Sản phẩm
+        span.separate-characters.pl-1 /
+        a.breadcrumd-link(href='') Cập nhật sản phẩm
+    .col-span-12.laber-themes.mt-3
+      h4.tabs-title.fz-md.text-upercase.py-4.border-bottom.pl-12.text-normal.bg-white Cập nhật sản phẩm
+      .grid.grid-cols-12.bg-white.mt-4.mb-8
+        .mt-4.mb-8.col-start-4.col-end-10
+          form(action=`/products/${product._id}?_method=PUT`, method="POST").form.px-8.py-1
+            .form-group
+              label.form-label(for='') Tên sản phẩm
+              input.form-control(type='text', name='name', id='', value= product.name)
+            .form-group
+              label.form-label(for='') Giá
+              input.form-control.flex-1(type='text', name='price', id='', value= product.price)
+            .form-group
+              label.form-label(for='') Giá khuyến mãi
+              input.form-control.flex-1(type='text', name='priceSale', id='', value= product.priceSale)
+            .form-group
+              label.form-label(for='') Độc quyền
+              input.form-control.flex-1(type='text', name='flagOwn', id='', value= product.flagOwn)
+            .form-group
+              label.form-label(for='') Giảm giá
+              input.form-control.flex-1(type='number', name='flagSale', id='', value= product.flagSale)
+            .form-group
+              label.form-label(for='') Link hình ảnh
+              input.form-control.flex-1(type='text', name='image', id='', value= product.image)
+            .form-group
+              input.mt-4.form-control.bg-success.fz-md.text-white.cursor-pointer(type='submit', value='Lưu lại')

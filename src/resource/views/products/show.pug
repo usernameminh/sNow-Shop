@@ -1,4 +1,4 @@
-extend ./layout/index
+extend ../layout/index
 block content 
   .grid.wide.grid-cols-12.gap-x-8
     // Breadcrumd
@@ -18,79 +18,80 @@ block content
       .grid.grid-cols-2.gap-x-4.bg-white.py-4.px-4
         .product-img.px-4.py-2
           .product-img-top
-            img(src='./img/sieu-data-sim-4g.jpg', width='100%', alt='')
+            img(src= product.image, width='100%', alt='')
           .product-img-bottom
             ul.product-img-list.d-flex
               li.product-img-item
-                img(src='./img/sieu-data-sim-4g.jpg', width='100%', alt='')
+                img(src= product.image, width='100%', alt='')
               li.product-img-item.ml-1
-                img(src='./img/sim-tam-free-1-thang-tang-sim-cam-on-.jpg', width='100%', alt='')
+                img(src= product.image, width='100%', alt='')
         .product-content
-          h1.product-heading SI&Ecirc;U DATA SIM 4G ( FREESHIP &dstrok;&#x1A1;n 5 sim khi nh&#x1EAD;p m&atilde;)
-          .card-body.product
-            span.card-rating.py-1
-              .star-content.d-flex
-                .star.star-on
-                  i.fas.fa-star
-                .star.star-on
-                  i.fas.fa-star
-                .star.star-on
-                  i.fas.fa-star
-                .star.star-on
-                  i.fas.fa-star
-                .star
-                  i.fas.fa-star
-                a.number.no-underline(href='') (5 &dstrok;&aacute;nh gi&aacute;)
-            span.text-normal.fz-small.py-1
-              | Th&#x1B0;&#x1A1;ng hi&#x1EC7;u: 
-              a.no-underline(href='') Vietnamobile
-            .card-price
-              span.price.fz-lg.text-primary-dark 25.000 &#x20AB;
-              .d-flex.align-end
-                span.regular-price 50.000 &#x20AB;
-                span.fz-md.pl-1 -50%
-          .product-description-short
-            b SIM Si&ecirc;u DATA
-            |  - Mi&#x1EC5;n ph&iacute; 1 th&aacute;ng, Free ship khi nh&#x1EAD;p m&atilde; 
-            b FREESHIP2020
-            |  cho &dstrok;&#x1A1;n h&agrave;ng 5 sim
-          .product-action
-            .product-add-to-cart.d-flex
-              span.control-label.fz-small.pr-4 S&#x1ED1; l&#x1B0;&#x1EE3;ng: 
-              .product-quantity
-                span.px-2.cursor-pointer(style='font-size: 2rem;') -
-                span.px-2 1
-                span.px-2.cursor-pointer(style='font-size: 2rem;') +
-            span.product-availability.fz-small.d-block.py-2.text-primary
-              | B&#x1EA1;n kh&ocirc;ng &dstrok;&#x1B0;&#x1EE3;c mua qu&aacute; 5 sim, hi&#x1EC7;n t&#x1EA1;i b&#x1EA1;n &dstrok;&atilde; mua: 1 sim
-            .product-number-choose.mt-2.ml-1
-              ul.product-number-list
-                li.product-number-item.d-flex.align-center
-                  span.btn.border-radius-3.chooose-number-count.mr-4 1
-                  .btn.border-radius-4.chooose-number-action.cursor-pointer.border-none
-                    span.chooose-phone.pr-4.fz-small 0387776243
-                    a.change-number.text-primary-dark.pl-4.fz-small Ch&#x1ECD;n s&#x1ED1; kh&aacute;c
-            .buy-now.mt-5
+            h1.product-heading= product.name
+            .card-body.product
+              span.card-rating.py-1
+                .star-content.d-flex
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star.star-on
+                    i.fas.fa-star
+                  .star
+                    i.fas.fa-star
+                  a.number.no-underline(href='') (5 &dstrok;&aacute;nh gi&aacute;)
+              span.text-normal.fz-small.py-1
+                | Th&#x1B0;&#x1A1;ng hi&#x1EC7;u: 
+                a.no-underline(href='') Vietnamobile
+              .card-price
+                span.price.fz-lg.text-primary-dark= product.priceSale + ' đ'
+                .d-flex.align-end
+                  span.regular-price= product.price + ' đ'
+                  span.fz-md.pl-1= product.flagSale + '%'
+            .product-description-short
+              b SIM Si&ecirc;u DATA
+              |  - Mi&#x1EC5;n ph&iacute; 1 th&aacute;ng, Free ship khi nh&#x1EAD;p m&atilde; 
+              b FREESHIP2020
+              |  cho &dstrok;&#x1A1;n h&agrave;ng 5 sim
+            .product-action
+              .product-add-to-cart.d-flex
+                span.control-label.fz-small.pr-4 S&#x1ED1; l&#x1B0;&#x1EE3;ng: 
+                .product-quantity
+                  span.px-2.cursor-pointer(style='font-size: 2rem;') -
+                  span.px-2 1
+                  span.px-2.cursor-pointer(style='font-size: 2rem;') +
+              span.product-availability.fz-small.d-block.py-2.text-primary
+                | B&#x1EA1;n kh&ocirc;ng &dstrok;&#x1B0;&#x1EE3;c mua qu&aacute; 5 sim, hi&#x1EC7;n t&#x1EA1;i b&#x1EA1;n &dstrok;&atilde; mua: 1 sim
+              .product-number-choose.mt-2.ml-1
+                ul.product-number-list
+                  li.product-number-item.d-flex.align-center
+                    span.btn.border-radius-3.chooose-number-count.mr-4 1
+                    .btn.border-radius-4.chooose-number-action.cursor-pointer.border-none
+                      span.chooose-phone.pr-4.fz-small 0387776243
+                      a.change-number.text-primary-dark.pl-4.fz-small Ch&#x1ECD;n s&#x1ED1; kh&aacute;c
+              .buy-now.mt-5
+                .d-flex.align-center
+                  span.btn.bg-primary-light.border-none.text-white.px-11.py-3.cursor-pointer Mua ngay
+                  span.btn.bg-primary.border-none.ml-4.text-white.px-3.py-3.cursor-pointer Th&ecirc;m v&agrave;o gi&#x1ECF; h&agrave;ng
+            .social-sharing.mt-5
               .d-flex.align-center
-                span.btn.bg-primary-light.border-none.text-white.px-11.py-3.cursor-pointer Mua ngay
-                span.btn.bg-primary.border-none.ml-4.text-white.px-3.py-3.cursor-pointer Th&ecirc;m v&agrave;o gi&#x1ECF; h&agrave;ng
-          .social-sharing.mt-5
-            .d-flex.align-center
-              span.fz-small Chia s&#x1EBB;:
-              a.btn.border-radius-50.cursor-pointer.ml-3
-                i.fab.fa-facebook-f
-              a.btn.border-radius-50.cursor-pointer.ml-2
-                i.fab.fa-twitter
-              a.btn.border-radius-50.cursor-pointer.ml-2
-                i.fab.fa-pinterest
-          .block-reassurance.mt-5
-            ul
-              li.block-reassurance-item.d-flex.align-center.py-3.border-bottom
-                img(src='./img/ic_verified_user_black_36dp_1x.png', alt='')
-                span.pl-3.fz-small Ch&iacute;nh s&aacute;ch b&#x1EA3;o m&#x1EAD;t (SSL th&ocirc;ng tin s&#x1EBD; &dstrok;&#x1B0;&#x1EE3;c b&#x1EA3;o m&#x1EAD;t)
-              li.block-reassurance-item.d-flex.align-center.py-3
-                img(src='./img/ic_local_shipping_black_36dp_1x.png', alt='')
-                span.pl-3.fz-small Ch&iacute;nh s&aacute;ch giao h&agrave;ng (&dstrok;&#x1EA3;m b&#x1EA3;o gia h&agrave;ng &dstrok;&uacute;ng h&#x1EB9;n)
+                span.fz-small Chia s&#x1EBB;:
+                a.btn.border-radius-50.cursor-pointer.ml-3
+                  i.fab.fa-facebook-f
+                a.btn.border-radius-50.cursor-pointer.ml-2
+                  i.fab.fa-twitter
+                a.btn.border-radius-50.cursor-pointer.ml-2
+                  i.fab.fa-pinterest
+            .block-reassurance.mt-5
+              ul
+                li.block-reassurance-item.d-flex.align-center.py-3.border-bottom
+                  img(src='./img/ic_verified_user_black_36dp_1x.png', alt='')
+                  span.pl-3.fz-small Ch&iacute;nh s&aacute;ch b&#x1EA3;o m&#x1EAD;t (SSL th&ocirc;ng tin s&#x1EBD; &dstrok;&#x1B0;&#x1EE3;c b&#x1EA3;o m&#x1EAD;t)
+                li.block-reassurance-item.d-flex.align-center.py-3
+                  img(src='./img/ic_local_shipping_black_36dp_1x.png', alt='')
+                  span.pl-3.fz-small Ch&iacute;nh s&aacute;ch giao h&agrave;ng (&dstrok;&#x1EA3;m b&#x1EA3;o gia h&agrave;ng &dstrok;&uacute;ng h&#x1EB9;n)
+        
       .grid.grid-cols-1.bg-white.mt-4
         .tabs.px-4
           h4.tabs-title.fz-md.text-upercase.py-4.border-bottom m&ocirc; t&#x1EA3; s&#x1EA3;n ph&#x1EA9;m
@@ -210,6 +211,7 @@ block content
                   span -50%
         .laber-themes.mt-3.mb-8
           h4.tabs-title.fz-md.text-upercase.py-4.border-bottom.px-2.text-normal.bg-white 16 S&#x1EA2;N PH&#x1EA8;M KH&Aacute;C TRONG C&Ugrave;NG DANH M&#x1EE4;C:
+
           .grid.grid-cols-3.gap-8.mt-4.mb-8
             .col-span-1
               .card
@@ -217,7 +219,7 @@ block content
                   img(src='./img/thanh-sim-hi-default.jpg', alt='')
                   img(src='./img/thanh-sim-hi.jpg', alt='')
                 .card-body
-                  a.no-underline(href='')
+                  a.no-underline(href='/detail')
                     h4.card-name TH&Aacute;NH HI ( nh&#x1EAD;p m&atilde; &dstrok;&#x1EC3; freeship khi mua 5 Sim)
                   .card-price
                     span.price 35.000 &#x20AB;
